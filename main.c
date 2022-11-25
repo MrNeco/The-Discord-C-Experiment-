@@ -15,6 +15,19 @@ int AMJ = 0;
 int xbox = 1;
 volatile int *banana = (int*) 'E';
 
+int fizzBuzz (int n) {
+    printf("\n");
+    for (int i = 0; i < n; i++) {
+        if (i % 3 && i % 5) {
+            printf("FizzBuzz: %i\n", i);
+        } else if (i % 3) {
+            printf("Fizz: %i\n", i);
+        } else if (i % 5) {
+            printf("Buzz: %i\n", i);
+        }
+    }
+}
+
 int main()
 {
     printf("hello world \n");
@@ -42,5 +55,6 @@ int main()
         printf("%c is a vowel.", c,"\n");
     else
         printf("%c is a consonant.","\n");
+    fizzBuzz(100);
     return 0;
 }
